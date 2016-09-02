@@ -10,6 +10,7 @@
 		7BBF0C231D79A9C200461320 /* FleetTime.h in Headers */ = {isa = PBXBuildFile; fileRef = 7BBF0C221D79A9C200461320 /* FleetTime.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7BBF0C2A1D79A9C200461320 /* FleetTime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BBF0C1F1D79A9C200461320 /* FleetTime.framework */; };
 		7BBF0C2F1D79A9C200461320 /* FleetTimeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BBF0C2E1D79A9C200461320 /* FleetTimeTests.swift */; };
+		7BBF0C3A1D79AB5F00461320 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BBF0C391D79AB5F00461320 /* Nimble.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +30,7 @@
 		7BBF0C291D79A9C200461320 /* FleetTimeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FleetTimeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BBF0C2E1D79A9C200461320 /* FleetTimeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FleetTimeTests.swift; sourceTree = "<group>"; };
 		7BBF0C301D79A9C200461320 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7BBF0C391D79AB5F00461320 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = "Externals/Nimble/build/Debug-iphoneos/Nimble.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7BBF0C3A1D79AB5F00461320 /* Nimble.framework in Frameworks */,
 				7BBF0C2A1D79A9C200461320 /* FleetTime.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -53,6 +56,7 @@
 		7BBF0C151D79A9C200461320 = {
 			isa = PBXGroup;
 			children = (
+				7BBF0C3B1D79AB6600461320 /* Frameworks */,
 				7BBF0C211D79A9C200461320 /* FleetTime */,
 				7BBF0C2D1D79A9C200461320 /* FleetTimeTests */,
 				7BBF0C201D79A9C200461320 /* Products */,
@@ -84,6 +88,14 @@
 				7BBF0C301D79A9C200461320 /* Info.plist */,
 			);
 			path = FleetTimeTests;
+			sourceTree = "<group>";
+		};
+		7BBF0C3B1D79AB6600461320 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7BBF0C391D79AB5F00461320 /* Nimble.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -342,6 +354,10 @@
 		7BBF0C371D79A9C200461320 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Externals/Nimble/build/Debug-iphoneos",
+				);
 				INFOPLIST_FILE = FleetTimeTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jwfriese.FleetTimeTests;
@@ -352,6 +368,10 @@
 		7BBF0C381D79A9C200461320 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Externals/Nimble/build/Debug-iphoneos",
+				);
 				INFOPLIST_FILE = FleetTimeTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jwfriese.FleetTimeTests;
@@ -378,6 +398,7 @@
 				7BBF0C351D79A9C200461320 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7BBF0C361D79A9C200461320 /* Build configuration list for PBXNativeTarget "FleetTimeTests" */ = {
 			isa = XCConfigurationList;
@@ -386,6 +407,7 @@
 				7BBF0C381D79A9C200461320 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
